@@ -15,9 +15,8 @@ import { updateMissionStatusAutomatically } from './controllers/missionsControll
 const app = express();
 const port = 3000;
 
-// Configuration du middleware CORS
 app.use(cors({
-    origin: 'http://localhost:4200', 
+    origin: ['http://localhost:4200', 'https://webapplicationp.netlify.app'], // ✅ Ajout de Netlify
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
