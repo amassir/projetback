@@ -16,10 +16,11 @@ const app = express();
 const port = 3000;
 
 app.use(cors({
-    origin: 'http://webapplicationp.netlify.app', // Autoriser uniquement ton frontend
+    origin: ['http://localhost:4200', 'https://webapplicationp.netlify.app'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
 
 // Middleware pour parser les requêtes JSON
 app.use(express.json());
