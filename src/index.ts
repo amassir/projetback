@@ -50,6 +50,6 @@ setInterval(async () => {
 }, 2000);
 
 // Démarrage du serveur
-app.listen(port, () => {
+app.listen(port,'0.0.0.0', () => {
     console.log(`Serveur tourne sur l'adresse http://localhost:${port}`);
 });
